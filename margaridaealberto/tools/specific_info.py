@@ -1,5 +1,5 @@
 #This page serves as a tool to define specific information to be used in the website.
-name = 'teresaefrancisco'
+name = 'margaridaealberto'
 title = 'TERESINHA e FRANCISCO'
 mbway1 = '914973388'
 mbway2 = '91'

@@ -3,9 +3,9 @@ import unidecode
 
 from flask import Blueprint, flash, g, redirect, render_template, request, url_for , current_app
 from werkzeug.security import check_password_hash, generate_password_hash
-from teresaefrancisco.tools import tools
+from margaridaealberto.tools import tools
 
-from teresaefrancisco.models import Product , Contribution , ProductImage , Confirmation , SpecificInfo
+from margaridaealberto.models import Product , Contribution , ProductImage , Confirmation , SpecificInfo
 
 bp = Blueprint('edit', __name__, url_prefix='/edit')
 

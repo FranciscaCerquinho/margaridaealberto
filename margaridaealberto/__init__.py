@@ -6,8 +6,8 @@ from flask_session import Session
 
 from . import sql_db
 from . import modules
-from teresaefrancisco.tools import specific_info
-from teresaefrancisco.models import SpecificInfo
+from margaridaealberto.tools import specific_info
+from margaridaealberto.models import SpecificInfo
 
 def create_app(test_config=None):
     app = Flask(__name__, instance_relative_config=True)

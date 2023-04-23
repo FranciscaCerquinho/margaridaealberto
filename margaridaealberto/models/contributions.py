@@ -1,9 +1,9 @@
-from teresaefrancisco import model 
-from teresaefrancisco.sql_db import db
+from margaridaealberto import model 
+from margaridaealberto.sql_db import db
 from sqlalchemy import Column, Integer , String , Text ,Float , ForeignKey
 from sqlalchemy.orm import relationship
 
-from teresaefrancisco.tools import specific_info
+from margaridaealberto.tools import specific_info
 
 class Contribution(db.Model ,model.Model,model.Base):
     __tablename__ = 'contribution'

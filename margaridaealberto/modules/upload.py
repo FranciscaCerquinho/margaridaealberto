@@ -5,7 +5,7 @@ from flask import Blueprint, redirect, url_for
 
 bp = Blueprint('upload', __name__, url_prefix='/upload')
 
-from teresaefrancisco.models import Product , ProductImage , Contribution , SpecificInfo
+from margaridaealberto.models import Product , ProductImage , Contribution , SpecificInfo
 
 @bp.route("/to_csv", methods =["GET", "POST"])
 def to_csv():
@@ -26,7 +26,7 @@ def to_csv():
             values[model].append(instance_values)
 
     for model in models.keys():
-        file = os.path.join('teresaefrancisco/static/data/csv', '%s.csv' % model)
+        file = os.path.join('margaridaealberto/static/data/csv', '%s.csv' % model)
         fields = models[model]
         rows = values[model]
 

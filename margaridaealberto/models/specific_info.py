@@ -1,5 +1,5 @@
-from teresaefrancisco import model 
-from teresaefrancisco.sql_db import db
+from margaridaealberto import model 
+from margaridaealberto.sql_db import db
 from sqlalchemy import Column, Integer , Text , JSON
 
 class SpecificInfo(db.Model ,model.Model,model.Base):

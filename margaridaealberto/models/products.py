@@ -1,6 +1,6 @@
 from email.policy import default
-from teresaefrancisco import model 
-from teresaefrancisco.sql_db import db
+from margaridaealberto import model 
+from margaridaealberto.sql_db import db
 from sqlalchemy import Column, Integer , String , Text ,Float , Boolean
 from sqlalchemy.orm import relationship
 
