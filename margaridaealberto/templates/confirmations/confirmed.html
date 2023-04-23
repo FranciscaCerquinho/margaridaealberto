@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<script src="{{ url_for('static', filename='js/confirmations.js')}}" defer></script>
+
+<div class="confirmations_background">
+    <div class="column_container" style="padding-top: 5rem;">
+        <h1>Muito obrigado pela confirmação!</h1>
+        <img style="width: 80vh;" src="{{url_for('static',filename='images/confirmations_confirmed.jpg')}}" alt="">
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,5 @@
+@media(min-width: 100em){
+    .church_image_container img {
+        width: 50vw;
+    }
+}

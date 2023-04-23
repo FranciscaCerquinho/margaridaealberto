@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<script src="{{ url_for('static', filename='js/confirmations.js')}}" defer></script>
+
+<div class="confirmations_background">
+    <div class="confirmations_table_container">
+        <table  class="table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Restrições alimentares</th>
+                    <th>Vegetariano</th>
+                    <th>Observações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for confirmation in confirmations %}
+                <tr>
+                    <td>{{confirmation.name}}</td>
+                    <td>{{confirmation.food_restriction if confirmation.has_food_restriction else 'Não tem'}}</td>
+                    <td>{{'Sim' if confirmation.is_vegetarian else 'Não'}}</td>
+                    <td>{{confirmation.comment if confirmation.comment else '' }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <button onclick="generateConfirmationsCSV()" class="accept"> Download </button>
+    </div>
+</div>
+{% endblock %}

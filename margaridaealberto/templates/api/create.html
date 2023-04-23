@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<form>
+    {% for key in columns.keys() %}
+        <label for="{{ key }}">{{ key }}:</label>
+        <input type="{{ columns[key] }}" id="{{ key }}" name="{{ key }}"><br>
+    {% endfor %}
+</form>
+{% endblock %}

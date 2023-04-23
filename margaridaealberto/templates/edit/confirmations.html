@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<script>
+    let api_url = "{{url_for('api.delete_confirmation',id=0)}}";
+</script>
+<script src="{{ url_for('static', filename='js/edit_confirmations.js')}}">
+</script>
+<div class="product_background">
+    <div class="confirmations_background">
+        <div class="confirmations_table_container">
+            <table  class="table">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Restrições alimentares</th>
+                        <th>Vegetariano</th>
+                        <th>Observações</th>
+                        <th>Apagar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for confirmation in confirmations %}
+                    <tr>
+                        <td>{{confirmation.name}}</td>
+                        <td>{{confirmation.food_restriction if confirmation.has_food_restriction else 'Não tem'}}</td>
+                        <td>{{'Sim' if confirmation.is_vegetarian else 'Não'}}</td>
+                        <td>{{confirmation.comment if confirmation.comment else '' }}</td>
+                        <td><button data-confirmation_id="{{confirmation.id}}" onclick="deleteConfirmation(this)" class="delete">Apagar</button></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

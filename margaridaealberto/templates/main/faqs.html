@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% import 'macros/q_and_a.html' as q_and_a_block %}
+
+{% block content %}
+<script src="{{ url_for('static', filename='js/faqs.js')}}" defer></script>
+
+<div class="faqs_container">
+  <div class="accordion-content">
+    <h2>FAQ</h2>
+    {% for q_and_a in q_and_as %}
+      {{q_and_a_block.q_and_a_card(q_and_a)}}
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

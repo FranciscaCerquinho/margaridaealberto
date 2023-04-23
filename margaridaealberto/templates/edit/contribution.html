@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="product_form_container">
+    <form method="post" class="product_form">
+        <div class="product_attribute_container">
+            <label for="name"> Name</label>
+            <input type="text" name="name" placeholder="{{contribution.name}}">
+        </div>
+        <div class="product_attribute_container">
+            <label for="message"> message</label>
+            <input type="text" name="message" placeholder="{{contribution.message}}">
+        </div>
+        <div class="product_attribute_container">
+            <label for="value_contributed"> Value contributed</label>
+            <input type="number" name="value_contributed" placeholder="{{contribution.value_contributed}}">
+        </div>
+        <div class="product_attribute_container">
+            <label for="product"> Product</label>
+            <select name="product">
+                {% for product in products%}
+                    {% if product == contribution.product %}
+                    <option value="{{product.id}}" selected>{{product.name}}</option>
+                    {% else %}
+                    <option value="{{product.id}}">{{product.name}}</option>
+                    {% endif %}
+                {% endfor%}
+            </select>
+        </div>
+        <button class="accept">Gravar</button>
+    </form>
+    <form method="post" action="{{url_for('edit.contribution',contribution_id=contribution.id,delete='delete')}}" class="product_form">
+        <button class ="delete">Apagar</button>
+    </form>
+</div>
+{% endblock %}

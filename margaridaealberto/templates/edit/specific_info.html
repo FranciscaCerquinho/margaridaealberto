@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="product_form_container">
+    <form method="post" class="product_form">
+        <div class="product_attribute_container">
+            <label for="title"> Titulo na pagina principal</label>
+            <input type="text" name="title" placeholder="{{specific_info.information['title']}}">
+        </div>
+        <div class="product_attribute_container">
+            <label for="mbway1"> MBway1 </label>
+            <input type="text" name="mbway1" placeholder="{{specific_info.information['mbway1']}}">
+        </div>
+        <div class="product_attribute_container">
+            <label for="mbway2"> MBway2 </label>
+            <input type="text" name="mbway2" placeholder="{{specific_info.information['mbway2']}}">
+        </div>
+        <div class="product_attribute_container">
+            <label for="iban"> IBAN </label>
+            <input type="text" name="iban" placeholder="{{specific_info.information['iban']}}">
+        </div>
+        <button class="accept">Gravar</button>
+    </form>
+</div>
+{% endblock %}

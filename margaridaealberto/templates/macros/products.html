@@ -1,0 +1,75 @@
+{% macro card(product) %}
+{% import 'macros/progress_bar.html' as progress_bar %}
+<div class="product_card productSliddingDivs">
+    <a href="{{url_for('products.product',product_id=product.id)}}">
+        {% if product.images %}
+        <img src="{{url_for('static',filename=product.images[0].path)}}" alt="Imagem da Peça">
+        {% else %}
+        <img src="{{url_for('static',filename='images/products/no_product.jpg')}}" alt="Imagem da Peça">
+        {% endif %}
+        <div>
+            <p>{{product.name}}</p>
+        </div>
+        {% if product.show_price %}
+        <div>
+            <p>{{product.price}}€</p>
+            {{progress_bar.progress_bar(product.calculate_percentage()|int)}}
+        </div>
+        {% endif %}
+    </a>
+</div>
+{% endmacro %}
+
+{% macro card_paid(product) %}
+{% import 'macros/progress_bar.html' as progress_bar %}
+<div class="product_card paid productSliddingDivs">
+    <a href="{{url_for('products.product',product_id=product.id)}}">
+        {% if product.images %}
+        <img src="{{url_for('static',filename=product.images[0].path)}}" alt="Imagem da Peça">
+        {% else %}
+        <img src="{{url_for('static',filename='images/products/no_product.jpg')}}" alt="Imagem da Peça">
+        {% endif %}
+        {% if product.show_price %}
+        <div>
+            <p>{{product.name}}</p>
+            <p>{{product.price}}€</p>
+            {{progress_bar.progress_bar(product.calculate_percentage()|int)}}
+        </div>
+        {% endif %}
+    </a>
+</div>
+{% endmacro %}
+
+{% macro honeymoon_card(product) %}
+{% import 'macros/progress_bar.html' as progress_bar %}
+<div class="product_card productSliddingDivs">
+    <a href="{{url_for('honeymoon.product',product_id=product.id)}}">
+        {% if product.images %}
+        <img src="{{url_for('static',filename=product.images[0].path)}}" alt="Imagem da Peça">
+        {% else %}
+        <img src="{{url_for('static',filename='images/products/no_product.jpg')}}" alt="Imagem da Peça">
+        {% endif %}
+        <div>
+            <p>{{product.name}}</p>
+            {{progress_bar.progress_bar(product.calculate_percentage()|int)}}
+        </div>
+    </a>
+</div>
+{% endmacro %}
+
+{% macro honeymoon_card_paid(product) %}
+{% import 'macros/progress_bar.html' as progress_bar %}
+<div class="product_card paid productSliddingDivs">
+    <a href="{{url_for('honeymoon.product',product_id=product.id)}}">
+        {% if product.images %}
+        <img src="{{url_for('static',filename=product.images[0].path)}}" alt="Imagem da Peça">
+        {% else %}
+        <img src="{{url_for('static',filename='images/products/no_product.jpg')}}" alt="Imagem da Peça">
+        {% endif %}
+        <div>
+            <p>{{product.name}}</p>
+            {{progress_bar.progress_bar(product.calculate_percentage()|int)}}
+        </div>
+    </a>
+</div>
+{% endmacro %}

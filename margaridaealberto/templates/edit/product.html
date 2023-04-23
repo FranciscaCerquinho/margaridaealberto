@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="product_form_container">
+    <form method="post" class="product_form"  enctype="multipart/form-data">
+            <div class="product_attribute_container">
+                <label for="name"> Name</label>
+                <input type="text" name="name" placeholder="{{product.name}}">
+            </div>
+            <div class="product_attribute_container">
+                <label for="description"> Description</label>
+                <input type="text" name="description" placeholder="{{product.description}}">
+            </div>
+            <div class="product_attribute_container">
+                <label for="price"> Price</label>
+                <input type="number" name="price" placeholder="{{product.price}}">
+            </div>
+            <div class="product_attribute_container">
+                <label for="store"> Store</label>
+                <input type="text" name="store" placeholder="{{product.store}}">
+            </div>
+            <div class="product_attribute_container">
+                <label for="show_price"> show_price</label>
+                <input type="checkbox" name="show_price" {{ "checked" if product.show_price }}>
+            </div>
+            <div class="product_attribute_container">
+                <label for="priority"> Priority</label>
+                <input type="number" name="priority" placeholder="{{product.priority}}">
+            </div>
+            {% if product.images %}
+            <table class="table-bordered">
+                <thead>
+                    <tr>
+                        <th>Path</th>
+                        <th>Apagar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for image in product.images %}
+                    <tr>
+                        <td>{{image.path}}</td>
+                        <td><input type="checkbox" name="images_to_delete" value="{{image.id}}"></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% endif %}
+            <div class="product_attribute_container">
+                <label for='picture'>Fotografias </label>
+                <input type="file" name="pictures" multiple>
+            </div>
+            <button class ="accept">Gravar</button>
+        </form>
+        <form method="post" action="{{url_for('edit.product',product_id=product.id,delete='delete')}}" class="product_form">
+            <button class ="delete">Apagar</button>
+        </form>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<script src="{{ url_for('static', filename='js/contributions.js')}}" defer></script>
+
+<div class="fundo_products"> 
+    <div class="background_trsp" id="white_back_for_products">
+      <div class="contributions_box">
+
+        {% for contribution in contributions %}
+
+        <div class="contribution_card_box">
+          <div class ="contribution_card">    
+            <div>{{contribution.name}}</div>
+            {% if contribution.product %}
+            <div>{{contribution.product.name}}</div>
+            {% endif %}
+            <div>{{contribution.value_contributed}}</div>
+            <div>{{contribution.message}}</div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <button onclick="generateContributionsCSV()" target="_blank" class="accept"> Download </button>
+</div>
+{% endblock %}

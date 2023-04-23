@@ -1,0 +1,32 @@
+Name,Description,Price,URL,Store
+Cadeiras de Jantar,8 Cadeiras para a sala de jantar,1600,images/products/cadeira.jpg,AREA
+Cama e colchão,Cama de casal estofada cinzento,690,images/products/cama.jpg,IKEA
+Móvel TV,Móvel para televisão e arrumação,214,images/products/movel-tv.jpg;images/products/movel-tv2.jpg,IKEA
+Sideboard,Sideboard para arrumação,410,images/products/aparador.jpg;images/products/aparador2.jpg;images/products/aparador3.jpg,sklum
+Poltrona,Poltrona estofada cor de menta,239,images/products/poltrona.jpg,KENAY
+Coffee Table,Mesa de centro,426,images/products/coffee-tab.jpg,KENAY
+Mesa de apoio,Sem descrição,179,images/products/mesa_entrada.jpg,KINDA HOME
+Mesa de Jantar,Mesa de jantar para 8 pessoas,670,images/products/mesa.jpg;images/products/mesa2.jpg;images/products/mesa3.jpg,sklum
+Faqueiro Completo,"12 talheres de carne e peixe, assim como talheres de servir",200,images/products/faqueiro.jpg;images/products/faqueiro2.jpg;images/products/faqueiro3.jpg,elcorteingles
+Tapete,Tapete Clássico 160cmX200cm,180,images/products/tapete.jpg;images/products/tapete2.jpg,elcorteingles
+Mesa escritório,Sem descrição,370,images/products/mesa_escritorio.jpg;images/products/mesa_escritorio2.jpg,sklum
+Máquina de lavar loiça,Sem descrição,430,images/products/loiça.jpg,TBD
+Frigorífico,Sem descrição,520,images/products/fridge.jpg,TBD
+Máquina de lavar roupa,Sem descrição,450,images/products/roupa.jpg,TBD
+Sofá,Sem descrição,1300,images/products/sofa.jpg;images/products/sofa2.jpg;images/products/sofa3.jpg,
+Cadeiras de escritório,Sem descrição,250,images/products/office_chair.jpg;images/products/office_chair2.jpg;images/products/office_chair3.jpg,TBD
+Candeeiros de teto,Sem descrição,140,images/products/candeeiro.jpg,sklum
+Mesinhas de cabeceira,Sem descrição,184,images/products/cabeceira.jpg;images/products/cabeceira2.jpg;images/products/cabeceira3.jpg,sklum
+Candeeiro de mesa,Sem descrição,80,images/products/candeeiromesa.jpg,area
+Candeeiro de pé,Sem descrição,189,images/products/candeeirope.jpg;images/products/candeeirope2.jpg,elcorteingles
+Viagem Porto -> Kuala Lumpur,,1000,static/images/products/malasia1.jpg
+Jantar na Malasia,,300,static/images/products/malasia2.jpg
+Scuba diving na Malasia,,300,static/images/products/scuba.jpg
+Hotel na Malasia,,750,static/images/products/malasia.jpg
+Viagem para Singapura,,200,static/images/products/singapura2.jpg
+Jantar em Singapura,,200,static/images/products/singapura.jpg
+Hotel em Singapura,,400,static/images/products/singapura1.jpg
+Viagem para as Filipinas,,200,static/images/products/filipinas1.jpg
+Jantar nas Filipinas,,300,static/images/products/filipinas2.jpg
+Hotel nas Filipinas,,800,static/images/products/filipinas.jpg
+Viagem Manila -> Porto,,1000,static/images/products/porto.jpg

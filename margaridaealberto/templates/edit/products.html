@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<script src="{{ url_for('static', filename='js/edit_products.js')}}" defer></script>
+
+<div class="product_background">
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Price paid</th>
+            <th>Store</th>
+            <th>Show price</th>
+            <th>Priority</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for product in products %}
+            <tr>
+                <td class="no_padding"><a href="{{url_for('edit.product',product_id=product.id)}}">{{product.name}}</a></td>
+                <td class="no_padding">{{product.description}}</td>
+                <td class="no_padding">{{product.price}}</td>
+                <td class="no_padding">{{product.price_paid}}</td>
+                <td class="no_padding">{{product.store}}</td>
+                <td class="no_padding"><input type="checkbox" value="0" {{ "checked" if product.show_price }}></td>
+                <td class="no_padding">{{product.priority}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% set url = url_for('create.product') %}
+<button class="rsvp_button" data-url="{{url}}" onclick="redirectTo(this)"> Criar produto </button>
+</div>
+{% endblock %}

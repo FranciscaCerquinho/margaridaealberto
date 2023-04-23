@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="edit_container">
+    <div class="edit_block_container">
+        <h1>Criar</h1>
+        <div class="model_to_edit">
+            <a href="{{url_for('create.product')}}"> Criar um novo produto </a>
+        </div>
+    </div>
+    <div class="edit_block_container">
+        <h1>Editar</h1>
+        <div class="model_to_edit">
+            <a href="{{url_for('edit.specific_info')}}"> Para editar informações no site </a>
+        </div>
+        <div class="model_to_edit">
+            <a href="{{url_for('edit.products')}}"> Para editar produtos criados </a>
+        </div>
+        <div class="model_to_edit">
+            <a href="{{url_for('edit.contributions')}}"> Para editar contribuições </a>
+        </div>
+        <div class="model_to_edit">
+            <a href="{{url_for('edit.confirmations')}}"> Para editar confirmações </a>
+        </div>
+    </div>
+    <div class="edit_block_container">
+        <h1>Ver</h1>
+        <div class="model_to_edit">
+            <a href="{{url_for('confirmations.all')}}"> Para ver todas as confirmações </a>
+        </div>
+        <div class="model_to_edit">
+            <a href="{{url_for('contributions.all')}}"> Para ver todas as contribuições </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

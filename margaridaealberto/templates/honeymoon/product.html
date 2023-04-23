@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+{% import 'macros/contributions.html' as contributions %}
+
+{% block content %}
+<script src="{{ url_for('static', filename='js/products.js')}}" defer></script>
+<script src="{{ url_for('static', filename='js/products_product.js')}}" defer></script>
+{% set product_background = url_for('static',filename=product.images[0].path) %}
+<div class="product_background"  style="background:url('{{product_background}}');"> 
+  <div class="product_container_column">
+    {% if contribution %}
+      <div class="contribution_thank_you">
+        {{contribution.thank_you_message()}}
+      </div>
+    {% endif %}
+    <div class="preco">
+      <p><b>{{product.name}}</b></p>
+    </div>
+    
+    {{contributions.contribution_form()}}
+  </div>
+
+  <div class="product_container_column">
+    {% for image in product.images %}
+      <div class="mySlides">
+        <img src="{{url_for('static',filename=image.path)}}" style="width:100%">
+      </div>
+    {% endfor %}
+
+    {% if product.images|length > 1 %}
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+  
+    <div class="row product_caroussel">
+      {% for image in product.images %}
+      <div class="column_product">
+        <img class="demo cursor" src="{{url_for('static',filename=image.path)}}" style="height:3rem" value="{{loop.index}}" onclick="currentSlide(this)">
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</div>
+  
+{% endblock %}

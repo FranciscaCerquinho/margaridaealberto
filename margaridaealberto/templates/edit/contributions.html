@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<script src="{{ url_for('static', filename='js/edit_products.js')}}" defer></script>
+
+<div class="product_background">
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Value Contributed</th>
+            <th>Message</th>
+            <th>Product</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for contribution in contributions %}
+            <tr>
+                <td class="no_padding"><a href="{{url_for('edit.contribution',contribution_id=contribution.id)}}">{{contribution.name}}</a></td>
+                <td class="no_padding">{{contribution.value_contributed}}</td>
+                <td class="no_padding">{{contribution.message}}</td>
+                <td class="no_padding">{{contribution.product.name}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+{% endblock %}

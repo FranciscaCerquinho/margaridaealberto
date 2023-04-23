@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% import 'macros/products.html' as products_macro %}
+
+{% block content %}
+<script src="{{ url_for('static', filename='js/products.js')}}" defer></script>
+
+<div class="products_background">
+  {% for product in products %}
+    {{products_macro.honeymoon_card(product)}}
+  {% endfor %}
+  {% for product in products_paid %}
+    {{products_macro.honeymoon_card_paid(product)}}
+  {% endfor %}
+</div>
+{% endblock %}

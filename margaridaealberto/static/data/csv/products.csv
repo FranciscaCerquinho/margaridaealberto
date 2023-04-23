@@ -1,0 +1,32 @@
+id,name,description,price,price_paid,store,show_price
+1,Cadeiras de Jantar,,1600.0,0.0,AREA,False
+2,Cama e colchão,,690.0,0.0,IKEA,False
+3,Móvel TV,,214.0,0.0,IKEA,False
+4,Sideboard,,410.0,0.0,sklum,False
+5,Poltrona,,239.0,0.0,KENAY,False
+6,Coffee Table,,426.0,0.0,KENAY,False
+7,Mesa de apoio,,179.0,0.0,KINDA HOME,False
+8,Mesa de Jantar,,670.0,0.0,sklum,False
+9,Faqueiro Completo,,200.0,0.0,elcorteingles,False
+10,Tapete,,180.0,0.0,elcorteingles,False
+11,Mesa escritório,,370.0,0.0,sklum,False
+12,Máquina de lavar loiça,,430.0,0.0,TBD,False
+13,Frigorífico,,520.0,0.0,TBD,False
+14,Máquina de lavar roupa,,450.0,0.0,TBD,False
+15,Sofá,,1300.0,0.0,,False
+16,Cadeiras de escritório,,250.0,0.0,TBD,False
+17,Candeeiros de teto,,140.0,0.0,sklum,False
+18,Mesinhas de cabeceira,,184.0,0.0,sklum,False
+19,Candeeiro de mesa,,80.0,0.0,area,False
+20,Candeeiro de pé,,189.0,0.0,elcorteingles,False
+21,Viagem Porto -> Kuala Lumpur,,1000.0,0.0,,True
+22,Jantar na Malasia,,300.0,0.0,,True
+23,Scuba diving na Malasia,,300.0,0.0,,True
+24,Hotel na Malasia,,750.0,0.0,,True
+25,Viagem para Singapura,,200.0,0.0,,True
+26,Jantar em Singapura,,200.0,0.0,,True
+27,Hotel em Singapura,,400.0,0.0,,True
+28,Viagem para as Filipinas,,200.0,0.0,,True
+29,Jantar nas Filipinas,,300.0,0.0,,True
+30,Hotel nas Filipinas,,800.0,0.0,,True
+31,Viagem Manila -> Porto,,1000.0,0.0,,True

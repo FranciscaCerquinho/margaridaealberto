@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<script src="{{ url_for('static', filename='js/confirmations.js')}}" defer></script>
+
+<div class="confirmations_background">
+    <div class="confirmations_form_container">
+        <h1>Queremos muito celebrar este dia com todos! Por favor confirme!!</h1>
+        <form method="post">
+            <div class="form_confirmation" id="form_confirmation">
+                <div class ="info_form_confirmation">
+                    <div class="contribution_input_container_row">
+                        <label for="name">Nome:</label>
+                        <input type="text" name="name" placeholder="Nome">
+                    </div> 
+                    <div class="contribution_input_container_column">
+                        <label for="name">Restrição alimentar?:</label>
+                        <div class='py'>
+                            <label class="yes_or_no">
+                                <input type="radio" class="option-input radio" name="has_food_restriction" value="True" onclick="showFoodRestrictionsInput()"/>
+                                Sim
+                                <div class="contribution_input_container_row" id="food_restriction" style="display: none;">
+                                    <label for="name">Qual?</label>
+                                    <input type="text" name="food_restriction" placeholder="Restrições alimentares">
+                                </div> 
+                            </label>
+                            <label class="yes_or_no">
+                                <input type="radio" class="option-input radio" name="has_food_restriction" value="False" checked onclick="hideFoodRestrictionsInput()"/>
+                                Não
+                            </label>
+                        </div>
+                    </div>
+                    <div class="contribution_input_container_column">
+                        <label for="name">Vegetariano?</label>
+                        <label class="yes_or_no">
+                            <input type="radio" class="option-input radio" name="is_vegetarian" value="True"/>
+                            Sim
+                        </label>
+                        <label class="yes_or_no">
+                            <input type="radio" class="option-input radio" name="is_vegetarian" value="False" checked/>
+                            Não
+                        </label>
+                    </div> 
+                    <div class="contribution_input_container_column">
+                        <label for="name">Observações:</label>
+                        <input type="text" name="comment" style="height:6rem;width: 20rem;">
+                    </div>    
+                </div>
+                <button class ="accept">Confirmar</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

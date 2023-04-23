@@ -1,0 +1,15 @@
+{% macro progress_bar(percentage) %}
+<div class="progressBarContainer">
+    <div class="progressBar">
+        {% if percentage %}
+            <div class="progressBar-done" data-done="{{percentage}}">
+                <b>{{percentage}}%</b>
+            </div>
+        {% else %}
+        <div class="progressBar-zero" data-done="{{percentage}}">
+            <b>0%</b>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endmacro %}

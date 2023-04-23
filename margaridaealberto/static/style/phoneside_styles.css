@@ -1,0 +1,88 @@
+@media (max-width: 75em) and (min-width: 47.99em) {
+    .navibar {
+        font-size:1rem!important;
+        background: rgba(0, 0,0, 0)!important;
+    }
+
+    .main-logo {
+        display: none!important;
+    }
+
+    .collapse:not(.show) {
+        display: none!important;
+    }
+
+    .navbar-toggler{
+        display: block!important;
+    }
+
+    .c-main-nav__block{
+        flex-direction: column!important;
+        background-color: white!important;
+        width: 100%;
+    }
+
+    .nav_logo{
+        display: none!important;
+    }
+
+    .navbar-dark .navbar-toggler {
+        background-color: rgba(0,0,0,.4);
+        color: rgba(255,255,255,.9)!important;
+        width: 4rem;
+    }
+
+    .navibar a {
+        color: black!important;
+    }
+
+    .text_wed_align{
+        padding-top: 3rem!important;
+        font-size: 4rem!important;
+    }
+
+    .flexi-box {
+        flex-direction: column;
+    }
+
+    #white_back {
+        padding-top: 0rem!important;
+        flex-direction: column!important;
+    }
+
+    .direita{
+        width: 95%!important;
+        margin-left: 0!important;
+        padding-bottom: 1rem!important;
+    }
+
+    .esquerda{
+        width: 95%!important;
+        margin-right: 0!important;
+    }
+
+    #contribute{
+        width:100%!important;
+    }
+
+    .mySlides{
+        width:100%!important;
+    }
+
+    .row{
+        justify-content: center;
+    }
+    .fundo_products{
+        padding-top: 4rem;
+    }
+
+    .c-main-nav__block{
+        flex-direction: column!important;
+        background-color: white!important;
+        width: 100%;
+    }
+
+    .c-main-nav__block:not(.show){
+        display: none!important;
+    }
+}
