@@ -26,7 +26,7 @@
     
     <body>
         <div>
-            <nav class="navibar navbar-dark" id="main-nav"> 
+            <!-- <nav class="navibar navbar-dark" id="main-nav"> 
                 <button class="navbar-toggler" id="navbarButton" type="button" onclick="changeNavbarDisplay()">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -41,7 +41,27 @@
                         <a href="{{url_for('confirmations.confirmation')}}">Confirmar</a>
                     </li>
                 </ul>
-            </nav>
+            </nav> -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="{{url_for('main.index')}}">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{url_for('products.all')}}">Lista de Casamento</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{url_for('confirmations.confirmation')}}">Confirmar</a>
+                    </li>
+                  </ul>
+                  <span class="navbar-text">
+                  </span>
+                </div>
+              </nav>
             {% if get_flashed_messages() %}
                 <header>
                     <div class="alert alert-danger border text-center flash_warning" role="alert">
