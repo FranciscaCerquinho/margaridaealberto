@@ -2,14 +2,15 @@
 
 {% block content %}
 <script src="{{ url_for('static', filename='js/confirmations.js')}}" defer></script>
+<link href="{{ url_for('static', filename='style/confirmation.css')}}" rel="stylesheet">
 
-<div class="confirmations_background">
-    <div class="confirmations_form_container">
-        <h1>Queremos muito celebrar este dia com todos! Por favor confirme!!</h1>
+<div class="register-photo">
+    <div class="form-container">
+        <div class="image-holder"></div>
         <form method="post">
             <div class="form_confirmation" id="form_confirmation">
                 <div class ="info_form_confirmation">
-                    <div class="contribution_input_container_row">
+                    <div class="contribution_input_container_row" style="width: 100%;">
                         <label for="name">Nome:</label>
                         <input type="text" name="name" placeholder="Nome">
                     </div> 

@@ -5,12 +5,8 @@
 {% block content %}
 <script src="{{ url_for('static', filename='js/products.js')}}" defer></script>
 <script src="{{ url_for('static', filename='js/products_product.js')}}" defer></script>
-{% if product.images %}
-{% set product_background = url_for('static',filename=product.images[0].path) %}
-{% else %}
-{% set product_background = url_for('static',filename='images/products/no_product.jpg') %}
-{% endif %}
-<div class="product_background"  style="background:url('{{product_background}}');"> 
+
+<div class="product_background"  > 
   <div class="product_container_column">
     {% if contribution %}
       <div class="contribution_thank_you">
