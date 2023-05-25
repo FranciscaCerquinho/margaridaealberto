@@ -544,7 +544,7 @@ body, html {
   padding: 6px;
   margin: 25px auto 20px;
   display: block;
-  width: 75%;  
+  width: 100%;  
 }
 
 input:focus {
