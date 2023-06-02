@@ -132,9 +132,9 @@
     .contributions_box {
         justify-content: center!important;
     }
-
+    
     .products_background{
-        background: rgb(167 167 192)!important;;
+        background-color: rgb(179, 212,224);
     }
 
     .accordion-content{

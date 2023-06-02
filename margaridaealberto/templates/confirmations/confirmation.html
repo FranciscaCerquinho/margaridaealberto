@@ -20,10 +20,6 @@
                             <label class="yes_or_no">
                                 <input type="radio" class="option-input radio" name="has_food_restriction" value="True" onclick="showFoodRestrictionsInput()"/>
                                 Sim
-                                <div class="contribution_input_container_row" id="food_restriction" style="display: none;">
-                                    <label for="name">Qual?</label>
-                                    <input type="text" name="food_restriction" placeholder="Restrições alimentares">
-                                </div> 
                             </label>
                             <label class="yes_or_no">
                                 <input type="radio" class="option-input radio" name="has_food_restriction" value="False" checked onclick="hideFoodRestrictionsInput()"/>
@@ -31,6 +27,10 @@
                             </label>
                         </div>
                     </div>
+                    <div class="contribution_input_container_row" id="food_restriction" style="display: none;width: 100%;">
+                        <label for="name">Qual?</label>
+                        <input type="text" name="food_restriction" placeholder="Restrições alimentares">
+                    </div> 
                     <div class="contribution_input_container_column">
                         <label for="name">Vegetariano?</label>
                         <label class="yes_or_no">
