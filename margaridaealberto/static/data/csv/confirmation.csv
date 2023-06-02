@@ -1,2 +1,2 @@
-id,name,has_food_restriction,food_restriction,is_vegetarian,comment,information
-1,margaridaealberto,,,,,"{'title': 'Margarida e Alberto', 'mbway1': '', 'mbway2': '91', 'iban': 'PT50'}"
+id,name,has_food_restriction,food_restriction,is_vegetarian,comment
+1,Ângela ,True,aa,,
