@@ -1,6 +1,6 @@
 function showFoodRestrictionsInput(){
     var foodRestrictions = document.getElementById("food_restriction");
-    foodRestrictions.style.display = "flex";
+    foodRestrictions.style.display = "block";
 }
 
 function hideFoodRestrictionsInput(){

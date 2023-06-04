@@ -3,19 +3,23 @@
 {% block content %}
 <script src="{{ url_for('static', filename='js/confirmations.js')}}" defer></script>
 <link href="{{ url_for('static', filename='style/confirmation.css')}}" rel="stylesheet">
-
-<div class="register-photo">
-    <div class="form-container">
-        <div class="image-holder"></div>
+<div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-12">
+        <img   src="{{url_for('static',filename='images/alberto_margarida_flores.jpeg')}}"  alt="Image" class="img-fluid">
+      </div>
+      <div class="col-lg-6 col-md-12">
         <form method="post">
-            <div class="form_confirmation" id="form_confirmation">
+            <div id="form_confirmation">
                 <div class ="info_form_confirmation">
-                    <div class="contribution_input_container_row" style="width: 100%;">
-                        <label for="name">Nome:</label>
-                        <input type="text" name="name" placeholder="Nome">
+                    <div class="form-group" style="width: 100%;">
+                        <div class="col-lg-12 col-md-12" >
+                            <label for="name"><b>Nome(s)</b></label>
+                            <input type="text" name="name" placeholder="Nome" style="width: 100%;">
+                        </div>
                     </div> 
-                    <div class="contribution_input_container_column">
-                        <label for="name">Restrição alimentar?:</label>
+                    <div class="form-group">
+                        <label for="name"><b>Restrição alimentar?</b></label>
                         <div class='py'>
                             <label class="yes_or_no">
                                 <input type="radio" class="option-input radio" name="has_food_restriction" value="True" onclick="showFoodRestrictionsInput()"/>
@@ -27,12 +31,12 @@
                             </label>
                         </div>
                     </div>
-                    <div class="contribution_input_container_row" id="food_restriction" style="display: none;width: 100%;">
-                        <label for="name">Qual?</label>
-                        <input type="text" name="food_restriction" placeholder="Restrições alimentares">
+                    <div class=" form-group" id="food_restriction" style="display: none;width: 100%;">
+                        <label for="name"><b>Qual?</b></label>
+                        <input type="text" name="food_restriction" placeholder="Restrições alimentares" style="width: 100%;">
                     </div> 
-                    <div class="contribution_input_container_column">
-                        <label for="name">Vegetariano?</label>
+                    <div class="form-group">
+                        <label for="name"><b>Vegetariano?</b></label>
                         <label class="yes_or_no">
                             <input type="radio" class="option-input radio" name="is_vegetarian" value="True"/>
                             Sim
@@ -42,14 +46,16 @@
                             Não
                         </label>
                     </div> 
-                    <div class="contribution_input_container_column">
-                        <label for="name">Observações:</label>
-                        <input type="text" name="comment" style="height:6rem;width: 20rem;">
+                    <div class="form-group"  style="width: 100%;">
+                        <label for="name"><b>Deixa-nos uma mensagem</b></label>
+                        <textarea class="form-control" id="message" placeholder="Mensagem" name="comment"  rows="4"></textarea>
+
                     </div>    
                 </div>
-                <button class ="accept">Confirmar</button>
+                <button class ="accept" id="contribute">Confirmar</button>
             </div>
         </form>
+      </div>
     </div>
-</div>
+  </div>
 {% endblock %}
