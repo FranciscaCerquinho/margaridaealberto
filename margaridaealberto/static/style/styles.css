@@ -627,7 +627,7 @@ button.delete {
 
 #contribute{
   margin: 0;
-  width:80%;
+  width:100%;
   padding:5%;
   margin-right: 10%;
 }
@@ -1227,9 +1227,6 @@ label{
   font-family:'Trebuchet MS', sans-serif;
 }
 .option-input:checked::after {
-  -webkit-animation: click-wave 0.65s;
-  -moz-animation: click-wave 0.65s;
-  animation: click-wave 0.65s;
   background: #40e0d0;
   content: '';
   display: block;
